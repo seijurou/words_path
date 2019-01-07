@@ -13,7 +13,7 @@ class Node
   ##
   def find_neighbor(words)
     @potential_neighbors ||= get_potential_neighbors(words)
-    @neighbor = @potential_neighbors.empty? ? nil : Node.new (@potential_neighbors.shift, @start_word, @end_word)
+    @neighbor = @potential_neighbors.empty? ? nil : Node.new(@potential_neighbors.shift, @start_word, @end_word)
   end
   
   def valid_neighbor?

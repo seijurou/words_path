@@ -1,5 +1,5 @@
 require 'optparse' 
-require 'path'
+require_relative 'path'
 
 params = {}
 OptionParser.new do |opts|

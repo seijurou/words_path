@@ -31,7 +31,7 @@ class Path
     else
       @nodes.pop
     end
-    buildpath!
+    build_path!
   end
   
   private
@@ -45,11 +45,13 @@ class Path
   end
   
   def dic_words(file_path, length)
+    ##print('insde dic_words: '+file_path+' '+length+' \end\n')
+    ##gets.chomp
     words = Set.new
     File.open(file_path) do |file|
       file.each do |line|
         word = line.strip
-        word.add(word.downcase) if word.length == length
+        words.add(word.downcase) if word.length == length
       end
     end
     words
